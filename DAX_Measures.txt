@@ -1,0 +1,23 @@
+
+TASK 4 – DAX MEASURES
+
+1. Total Sales
+SUM(train[Sales])
+
+2. Total Orders
+DISTINCTCOUNT(train[Order ID])
+
+3. Total Customers
+DISTINCTCOUNT(train[Customer ID])
+
+4. Previous Month Sales
+CALCULATE([Total Sales], PREVIOUSMONTH('Calendar'[Date]))
+
+5. MoM Growth %
+DIVIDE([Total Sales] - [Previous Month Sales], [Previous Month Sales])
+
+6. Previous Year Sales
+CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
+
+7. YoY Growth %
+DIVIDE([Total Sales] - [Previous Year Sales], [Previous Year Sales])
